@@ -19,8 +19,9 @@ const Login = () => {
   const handleSubmit = async (values, { setSubmitting, setErrors }) => {
     try {
       const response = await axios.post("http://localhost:5000/api/auth/admin/login", values, { withCredentials: true });
-      
+  
       if (response.status === 200) {
+        localStorage.setItem("jwt", response.data.token); // Store JWT token
         alert("Login Successful!");
         navigate("/dashboard");
       }
@@ -29,7 +30,7 @@ const Login = () => {
     }
     setSubmitting(false);
   };
-
+  
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-900">
       <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-96">
