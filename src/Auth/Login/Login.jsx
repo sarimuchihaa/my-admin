@@ -31,6 +31,11 @@ const Login = () => {
   return (
     <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 bg-black">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          alt="LittleGames"
+          src="/logo.png"
+          className="mx-auto h-10 w-auto"
+        />
         <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-white">
           Login
         </h2>
@@ -51,7 +56,7 @@ const Login = () => {
                     type="email"
                     required
                     autoComplete="email"
-                    className="block w-full rounded-md bg-white px-3 py-1.5 text-white outline outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-black outline outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
                   />
                   <ErrorMessage name="email" component="p" className="text-red-500 text-sm" />
                 </div>
@@ -68,7 +73,7 @@ const Login = () => {
                     type="password"
                     required
                     autoComplete="current-password"
-                    className="block w-full rounded-md bg-white px-3 py-1.5 text-gray-900 outline outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-black outline outline-gray-300 placeholder:text-gray-400 focus:outline-indigo-600 sm:text-sm"
                   />
                   <ErrorMessage name="password" component="p" className="text-red-500 text-sm" />
                 </div>
